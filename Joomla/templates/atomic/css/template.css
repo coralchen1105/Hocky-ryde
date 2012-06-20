@@ -1,0 +1,105 @@
+
+.relax {
+	clear:both;
+	height:0px;
+	line-height:0px;
+	font-size:1px;
+	
+
+}
+
+a{
+    text-decoration:none;
+}
+body {
+    background: url('../images/background.png') top no-repeat;
+    font-family: arial;
+    color: #525252;
+}
+
+#wrapper {
+    width: 1030px;
+    margin:auto;
+    margin-top: 0px;
+    
+}
+
+#heading {
+    height:126px;
+    margin-top: 10px;
+    
+}
+#heading span{
+    width: 530px;
+    height:114px;
+    float: left;
+}
+.topright {
+    float: right;
+    margin-right: 30px;
+}
+
+.activemenu {
+color:white;
+
+}
+
+
+#navigation {
+    height: 45px;
+    background: url('../images/nav_bg.png') repeat-x top;
+    border-radius: 8px;
+/*    box-shadow: 0px 2px 1px gray;*/
+    
+}
+
+#navigation a {
+	width:174px;
+	height:50px;
+}
+
+#navigation a:hover {
+color:white;
+}
+
+#navigation a:active {
+color:white;
+}
+
+#navigation a:visited {
+
+color:#525252;
+}
+
+#navigation span {
+    padding: 3px 43px;
+    margin-top: 10px;
+    float: left;
+  /*  font-weight:bold;*/
+    border-right-style:dotted;
+    border-right-width:1px;
+    border-color: #4b4b4b;
+    
+}
+
+#footer {
+    height: 20px;
+    margin-top: 10px;
+    font-color:#616161;
+}
+
+.cr {
+    float: left;
+    width: 500px;
+    font-size: 12px;
+}
+
+.fr {
+    float:right;
+}
+
+.fr span {
+    padding: 0px 15px;
+    border-right: solid thin grey;
+    
+}

@@ -1,0 +1,205 @@
+
+a{
+	text-decoration:none;
+}
+
+#hero {
+	height:433px;
+}
+
+.heroimage {
+    height: 412px;
+    width: 1028px;
+    border: thin solid #666;
+    background-color: #e7e7e7;
+	-moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    margin-top: 20px;
+    float: left;
+}
+
+.heroimage img {
+    margin-top: 15px;
+    margin-left:14px;
+}
+
+#content {
+	height:700px;
+	margin:0px;
+	margin-bottom:20px;
+	border:thin solid grey;
+	border-radius:5px;
+	margin-top:10px;
+	box-shadow:0px 2px 4px 0px #979797;
+}
+
+.bg{
+	float:left;
+	background-color:#979797;
+	height:700px;
+	width:231px;
+	
+}
+
+.nav {
+	margin-left:-231px;
+	float:left;
+	width:240px;
+	height:700px;
+}
+
+.submenu {
+	background-color:white;
+	border-bottom:thin dashed #616161;
+	color:#4b4b4b;
+	height:28px;
+	padding-left:38px;
+	width:192px;
+	float:left;
+	cursor:pointer;
+	font-size:14px;
+	padding-top:10px;
+	font-weight:bold;
+	border-right:thin solid #616161;
+}
+
+.tab {
+	background-color:#979797;
+	border-bottom:thin solid #616161;
+	padding-top:15px;
+	color:white;
+	font-size:15px;
+	height:30px;
+	padding-left:20px;
+	font-weight:bold;
+	width:211px;
+	float:left;
+	cursor:pointer;
+}
+
+.activetag {
+	background:#fec336; 
+	border-bottom:thin solid #616161;
+	padding-top:15px;
+	color:#4b4b4b;
+	font-size:15px;
+	height:30px;
+	padding-left:20px;
+	font-weight:bold;
+	width:211px;
+	float:left;
+	cursor:pointer;
+}
+
+.hidesub{
+	display:none;
+}
+
+.showsub{
+	display:block;
+}
+
+.hide {
+	float:right;
+	display:none;
+}
+
+
+.show {
+	float:right;
+	display:block;
+}
+
+.contentHide {
+	float:left;
+	display:none;
+}
+
+.contentShow {
+	float:left;
+	display:block;
+}
+
+.rc {
+	float:right;
+	height:650px;
+	width:750px;
+}
+
+.newsarea {
+	width:704px;
+	height:124px;
+	border-bottom:thin solid #7a7a7a;
+}
+
+.contentDate{
+
+	color:black;
+	font-weight:bold;
+	font-style:italic;
+	font-size:14px;
+}
+
+.contentTitle{
+	font-size:14px;
+	font-weight:bold;
+}
+
+.contentpart{
+
+	font-size:12px;
+}
+
+table {
+	border:thin solid #7a7a7a;
+	border-radius:5px;
+
+}
+
+.titlecol{
+	width:150px;
+	text-align:left;
+}
+
+.fixcol{
+	width:230px;
+
+}
+td {
+	padding:10px;
+	/*width:230px;*/
+	border:thin solid #7a7a7a;
+	text-align:center;
+}
+#foottag {
+	height:220px;
+	border:thin solid grey;
+	border-radius:5px;
+	margin-top:10px;
+}
+
+.foothead {
+	border-bottom:thin solid grey;
+	height:35px;
+	font-size:22px;
+	padding-top:10px;
+	padding-left:20px;
+}
+
+.footnote div {
+	float:left;
+	height:150px;
+	width:255px;
+	border-right:thin solid #dedede;
+	margin-top:15px;
+}
+
+.footnote h2 {
+	margin-top:0px;
+	font-style:italic;
+	margin-left:20px;
+	font-size:20px;
+	margin-bottom:0px;
+
+}

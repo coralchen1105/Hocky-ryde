@@ -1,0 +1,171 @@
+/* 
+    Document   : homepage
+    Created on : May 3, 2012, 10:12:41 AM
+    Author     : Rex Gomeeki
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+a{
+	text-decoration:none;
+}
+.relax {
+	clear:both;
+	height:0px;
+	line-height:0px;
+	font-size:1px;
+	
+
+}
+#hero {
+	height:423px;
+	width: 1010px;
+    border: thin solid #666;
+    background-color: #e7e7e7;
+	-moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    margin-top: 15px;
+	float:left;
+	margin-bottom:-399px;
+	
+}
+
+.slides_container {
+    height: 390px;
+	float:left;
+	width:1010px;
+	
+    
+}
+
+.slides_container img {
+    margin-top:10px;
+    margin-left:14px;
+	float:left;
+}
+
+.slides_container div {
+                
+				width: 1010px;
+                display:block;
+				float:left;
+            } 
+		
+
+.pagination {
+	width: 125px; 
+    margin-left:434px;
+	margin-top:0px;
+	float:left;
+
+}
+
+.pagination li {
+float:left;
+margin:10px 5px;
+list-style:none;
+
+}
+
+
+.pagination li a {
+display: block;
+width: 12px;
+height: 3px;
+padding-top: 12px;
+background-image: url('components/com_homepage/images/hero_dot_sel.png');
+background-position: 0 0;
+float: left;
+overflow: hidden;
+}
+
+.pagination li.current a {
+background-image: url('components/com_homepage/images/hero_dot.png');
+}
+
+
+
+
+.heroinfo h1{
+    height: 18px;
+ 	float:left;
+    color: #ffb400;
+    margin-left:19px;
+}
+
+.heroinfo p {
+	
+	float:left;
+	text-align:justify;
+	color:#cecece;
+	width:288px;
+	margin-left:19px;
+	line-height:21px;
+}
+
+
+#moredetail {
+	position:relative;
+	top:-51px;
+	left:881px;
+	width:105px;
+}
+
+#content {
+	height:610px;
+	margin:0px;
+	margin-bottom:20px;
+}
+.lc {
+	width:700px;
+	border:thin solid grey;
+	height:610px;
+	margin-left:0px;
+	border-radius:5px;
+	float:left;
+}
+
+.rc {
+	width:300px;
+	height:610px;
+	float:right;
+	border-radius:5px;
+	border:thin solid grey;
+}
+.heading {
+	height:45px;
+	background:url('components/com_homepage/images/heading_bg.png') repeat-x top;
+}
+
+.news {
+	height:120px;
+	width:650px;
+	border:thin solid black;
+	margin-left:20px;
+	margin-top:10px;
+}
+
+.sponsors  {
+	height:180px;
+	width:260px;
+	border-bottom:thin solid #a0a0a0;
+	float:left;
+	margin-left:20px;
+	padding-bottom:10px;
+}
+
+.sponsors a {
+text-decoration:none;
+
+}
+.sponsors img {
+	margin-top:25px;
+	
+}
+
+.sponsors p {
+	margin-left:51px;
+	color:#707070;
+	font-weight:bold;
+}
