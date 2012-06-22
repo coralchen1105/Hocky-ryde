@@ -31,6 +31,7 @@ class PanelViewPanel extends JView
 
 		JToolBarHelper::addNew();
 		JToolBarHelper::editList();
+		JToolBarHelper::publish();
 		JToolBarHelper::unpublish();
 
 		$file_name = JPATH_ADMINISTRATOR.DS.'components'.DS.'com_panel'.DS.'models'.DS.'panel.php';
@@ -46,7 +47,7 @@ class PanelViewPanel extends JView
 		$this->value = $model->getAllNews();
 
 
-		// var_dump($this->value);
+		// var_dump($this->value); exit;
 		parent::display($tpl);
 	}
 }

@@ -6,12 +6,12 @@ jimport('joomla.application.component.modellist');
 class PanelModelPanel extends JModelList
 {
 	
-
 	public function getAllNews(){
 		$db = JFactory::getDBO();
-		$sql = 'SELECT ID,Date,title,content,catalogues,status 
+		$sql = "SELECT ID,Date,title,content,catalogues,status 
 		 			FROM #__newshockyclub
-		 			ORDER BY date DESC';
+		 			
+		 			ORDER BY date DESC";
 		$db->setQuery($sql);
 		$row = $db->loadRowList();
 		// var_dump($row);exit;
@@ -32,10 +32,50 @@ class PanelModelPanel extends JModelList
 		$user_id = $db->insertid();
 
 		return true;
-		
-		// return $this->getAllNews();
-		//  var_dump($this->getAllNews());
 
+	}
+
+	public function editNews($newsId){
+		$db = JFactory::getDBO();
+		$sql = "SELECT Date,title,content,catalogues,status 
+		 			FROM g7e1f_newshockyclub
+		 			WHERE ID = '$newsId'";
+		$db->setQuery($sql);
+		$row = $db->loadRowList();
+		return $row;
+
+	}
+
+	public function updateNews($newsId,$date,$title,$content,$category,$publish){
+		$db = JFactory::getDBO();
+		$sql = "UPDATE g7e1f_newshockyclub
+				SET Date = '$date', title = '$title', content = '$content', catalogues = '$category', status = '$publish'
+				WHERE ID = '$newsId' ";
+		$db->setQuery($sql);
+		$db->query();
+
+		return true;
+	}
+
+	public function publishNews($oneNewsId){
+		$db = JFactory::getDBO();
+		$sql = "UPDATE g7e1f_newshockyclub
+				SET status = 'publish'
+				WHERE ID = '$oneNewsId' ";
+		
+		$db->setQuery($sql);
+		$db->query();
+
+	}
+
+	public function unPublishNews($oneNewsId){
+		$db = JFactory::getDBO();
+		$sql = "UPDATE g7e1f_newshockyclub
+				SET status = 'unpublish'
+				WHERE ID = '$oneNewsId' ";
+		
+		$db->setQuery($sql);
+		$db->query();
 
 	}
 }

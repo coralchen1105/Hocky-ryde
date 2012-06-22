@@ -36,10 +36,7 @@ class PanelViewPanels extends JView
 			require_once $file_name;
 		}
 
-		// $model = $this->getModel('Panel');
-
 		$model = new PanelModelPanel();
-		// var_dump($model);
 
 		$this->result = $model->getAllNews();
 		
@@ -53,11 +50,25 @@ class PanelViewPanels extends JView
 		
 		JToolBarHelper::cancel();
 		
-
 		//read database and assign all the data ready for template for display.
 		
+		$newsId = $this->getNewsId();
+		
 
+		if(!empty($newsId)){
+			$this->oneNews = $model->editNews($newsId);	
+			
+		}
 		// $this->display();
-		parent::display();
+		parent::display($tpl);
+	}
+
+
+	public function getNewsId() {
+		$test = JRequest::get('cid[]');
+		$newsId = $test[cid][0];
+
+		return $newsId;
+
 	}
 }
