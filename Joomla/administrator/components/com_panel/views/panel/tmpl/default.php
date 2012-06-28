@@ -10,6 +10,7 @@ JHtml::_('behavior.multiselect');
 
 <?php 
 $value = $this->value;
+$num_rows = $this->num_rows;
 
  ?>
 <style type="text/css">
@@ -25,83 +26,51 @@ $value = $this->value;
 				<input type="checkbox" name="checkall-toggle" value="" title="Check All" onclick="Joomla.checkAll(this)" />
 			</th>
 			
-			<th width="25%">
+			<th width="30%">
 				Title
 			</th>
 			
-			<th width="15%">
+			<th width="10%">
 				Date
 			</th>
 			
-			<th width="15%">
+			<!-- <th width="15%">
 				Content
-			</th>
+			</th> -->
 
-			<th width="15%">
+			<th width="10%">
 				Catalogy
 			</th>
 			
-			<th width="15%">
+			<th width="10%">
 				Status
 			</th>
 		</tr>
 	</thead>
 
 	<tbody>
-		<tr class="row0">
-			<td class="center">
-				<input type="checkbox" id="cb0" name="cid[]" value="<?php echo $value[0][0]; ?>" onclick="Joomla.isChecked(this.checked);" title="Checkbox for row 1">
-			</td>
-			<td class="center"><?php echo $value[0][2]; ?></td>
-			<td class="center"><?php echo $value[0][1]; ?></td>
-			<td class="center"><?php echo $value[0][3]; ?></td>
-			<td class="center"><?php echo $value[0][4]; ?></td>
-			<td class="center"><?php echo $value[0][5]; ?></td>
-		</tr>
 
-		<tr class="row1">
-			<td class="center">
-				<input type="checkbox" id="cb1" name="cid[]" value="<?php echo $value[1][0]; ?>" onclick="Joomla.isChecked(this.checked);" title="Checkbox for row 2">
-			</td>
-			<td class="center"><?php echo $value[1][2]; ?></td>
-			<td class="center"><?php echo $value[1][1]; ?></td>
-			<td class="center"><?php echo $value[1][3]; ?></td>
-			<td class="center"><?php echo $value[1][4]; ?></td>
-			<td class="center"><?php echo $value[1][5]; ?></td>
-		</tr>
+		<?php 
+		$i=0;
+		
+		while($i<=$num_rows){
+		?>
 
-		<tr class="row2">
-			<td class="center">
-				<input type="checkbox" id="cb2" name="cid[]" value="<?php echo $value[2][0]; ?>" onclick="Joomla.isChecked(this.checked);" title="Checkbox for row 3">
+		<tr class="row<?php echo $i?>">
+			<td class="center">	
+				<input type="checkbox" id="cb<?php echo $i;?>" name="cid[]" value="<?php echo $value[$i][0]; ?>" onclick="Joomla.isChecked(this.checked);" title="Checkbox for row <?php echo $i+1;?>">
 			</td>
-			<td class="center"><?php echo $value[2][2]; ?></td>
-			<td class="center"><?php echo $value[2][1]; ?></td>
-			<td class="center"><?php echo $value[2][3]; ?></td>
-			<td class="center"><?php echo $value[2][4]; ?></td>
-			<td class="center"><?php echo $value[2][5]; ?></td>
-		</tr>
-
-		<tr class="row3">
-			<td class="center">
-				<input type="checkbox" id="cb3" name="cid[]" value="<?php echo $value[3][0]; ?>" onclick="Joomla.isChecked(this.checked);" title="Checkbox for row 4">
-			</td>
-			<td class="center"><?php echo $value[3][2]; ?></td>
-			<td class="center"><?php echo $value[3][1]; ?></td>
-			<td class="center"><?php echo $value[3][3]; ?></td>
-			<td class="center"><?php echo $value[3][4]; ?></td>
-			<td class="center"><?php echo $value[3][5]; ?></td>
-		</tr>
-
-		<tr class="row4">
-			<td class="center">
-				<input type="checkbox" id="cb4" name="cid[]" value="<?php echo $value[4][0]; ?>" onclick="Joomla.isChecked(this.checked);" title="Checkbox for row 5">
-			</td>
-			<td class="center"><?php echo $value[4][2]; ?></td>
-			<td class="center"><?php echo $value[4][1]; ?></td>
-			<td class="center"><?php echo $value[4][3]; ?></td>
-			<td class="center"><?php echo $value[4][4]; ?></td>
-			<td class="center"><?php echo $value[4][5]; ?></td>
-		</tr>
+			<td class="center"><?php echo $value[$i][2]; ?></td>
+			<td class="center"><?php echo $value[$i][1]; ?></td>
+			<!-- <td class="center"><?php echo $value[$i][3]; ?></td> -->
+			<td class="center"><?php echo $value[$i][4]; ?></td>
+			<td class="center"><?php echo $value[$i][5]; ?></td>
+		</tr>	
+		<?php
+			$i++;
+		}
+		?>
+		
 		
 	</tbody>
 </table>

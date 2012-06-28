@@ -26,8 +26,9 @@ class HomepageModelHomepage extends JModelList
 
 		 $db = JFactory::getDBO();
 
-		 $query = "SELECT date,title,content,catalogues 
-		 			FROM #__newshockyclub
+		 $query = "SELECT ID,date,title,content,catalogues 
+		 			FROM g7e1f_newshockyclub
+		 			WHERE status = 'publish'
 		 			ORDER BY date DESC";
 
 		 $db->setQuery($query);

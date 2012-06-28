@@ -65,57 +65,59 @@ background:url('components/com_homepage/images/hero_info.png') top no-repeat;
 
         $(function(){
 					$("#slides").slides({
-										preload: true,
-										preloadImage: 'images/hero1.jpg',
-										//effect:'fade',
-										//fadeSpeed:900,
-										play: 5000,
-										currentClass: 'current',
-										pause: 25000,
-										hoverPause: true,
-										//pagination: false,
-										generatePagination: false,
-										autoHeight:false,
-										
-										animationComplete: function(event) {
-											
-											//alert($('.current').children('a').html());
+						preload: true,
+						preloadImage: 'images/hero1.jpg',
+						//effect:'fade',
+						//fadeSpeed:900,
+						play: 5000,
+						currentClass: 'current',
+						pause: 25000,
+						hoverPause: true,
+						//pagination: false,
+						generatePagination: false,
+						autoHeight:false,
+						
+						animationComplete: function(event) {
+							
+							//alert($('.current').children('a').html());
 
-											if(event==1){
-												$('#mens').css('display','block');//.fadeIn("slow");
-												$('#womens,#juniors,#master').css('display','none');
-												//$('#dotone').attr('src','components/com_homepage/images/hero_dot_sel.png');
-												//$('#dottwo,#dotthree,#dotfour').attr('src','components/com_homepage/images/hero_dot.png');
-											}
-											
-											if(event==2){
-												$('#womens').css('display','block');
-												$('#mens,#juniors,#master').css('display','none');
-												//$('#dottwo').attr('src','components/com_homepage/images/hero_dot_sel.png');
-												//$('#dotone,#dotthree,#dotfour').attr('src','components/com_homepage/images/hero_dot.png');
-											}
-											
-											if(event==3){
-												$('#juniors').css('display','block');
-												$('#womens,#mens,#master').css('display','none');
-												//$('#dotthree').attr('src','components/com_homepage/images/hero_dot_sel.png');
-												//$('#dotone,#dottwo,#dotfour').attr('src','components/com_homepage/images/hero_dot.png');
-											}
-											
-											if(event==4){
-												$('#master').css('display','block');
-												$('#womens,#juniors,#mens').css('display','none');
-												//$('#dotfour').attr('src','components/com_homepage/images/hero_dot_sel.png');
-												//$('#dotone,#dotthree,#dottwo').attr('src','components/com_homepage/images/hero_dot.png');
-											}
-											
-											//$('.heroinfo').show();
-											//if($("#one"){//
-												//changeInfo('mens','womens','juniors','master');
-											//}//
-										}	
+							if(event==1){
+								$('#mens').css('display','block');//.fadeIn("slow");
+								$('#womens,#juniors,#master').css('display','none');
+								//$('#dotone').attr('src','components/com_homepage/images/hero_dot_sel.png');
+								//$('#dottwo,#dotthree,#dotfour').attr('src','components/com_homepage/images/hero_dot.png');
+							}
+							
+							if(event==2){
+								$('#womens').css('display','block');
+								$('#mens,#juniors,#master').css('display','none');
+								//$('#dottwo').attr('src','components/com_homepage/images/hero_dot_sel.png');
+								//$('#dotone,#dotthree,#dotfour').attr('src','components/com_homepage/images/hero_dot.png');
+							}
+							
+							if(event==3){
+								$('#juniors').css('display','block');
+								$('#womens,#mens,#master').css('display','none');
+								//$('#dotthree').attr('src','components/com_homepage/images/hero_dot_sel.png');
+								//$('#dotone,#dottwo,#dotfour').attr('src','components/com_homepage/images/hero_dot.png');
+							}
+							
+							if(event==4){
+								$('#master').css('display','block');
+								$('#womens,#juniors,#mens').css('display','none');
+								//$('#dotfour').attr('src','components/com_homepage/images/hero_dot_sel.png');
+								//$('#dotone,#dotthree,#dottwo').attr('src','components/com_homepage/images/hero_dot.png');
+							}
+							
+							//$('.heroinfo').show();
+							//if($("#one"){//
+								//changeInfo('mens','womens','juniors','master');
+							//}//
+						}	
 					});
 		});
+
+	
 </script>
 
 
@@ -148,13 +150,7 @@ background:url('components/com_homepage/images/hero_info.png') top no-repeat;
 			<li class=""><a href="#3">4</a></li>
 			
 		</ul>
-			<!--<div class="herodot">
-				<img id="dotone" src="components/com_homepage/images/hero_dot_sel.png" />
-				<img id="dottwo" src="components/com_homepage/images/hero_dot.png" />
-				<img id="dotthree" src="components/com_homepage/images/hero_dot.png" />
-				<img id="dotfour" src="components/com_homepage/images/hero_dot.png" />
-							
-			</div>	-->
+			
 		</div>	
 		
 </div>	
@@ -204,27 +200,31 @@ background:url('components/com_homepage/images/hero_info.png') top no-repeat;
 					<a href="http://hockey.dev/index.php?option=com_season&view=season" style="float:right; margin-top:20px;margin-right:20px;"><img src="components/com_homepage/images/viewall.png" style="border:none;"/></a>
 				</div>
 				<div>
-					<div class="news">
-						<p class="contentDate"><?php echo  $this->value[0][0];?> </p>
-						<p class="contentTitle"><?php echo  $this->value[0][1];?> </p>
-						<p class="contentpart"> <?php echo  $this->value[0][2];?> </p>
-					</div>
-					<div class="news">
-						<p class="contentDate"><?php echo  $this->value[1][0];?> </p>
-						<p class="contentTitle"><?php echo  $this->value[1][1];?> </p>
-						<p class="contentpart"> <?php echo  $this->value[1][2];?> </p>
-					</div>
-					<div class="news">
-						<p class="contentDate"><?php echo  $this->value[2][0];?> </p>
-						<p class="contentTitle"><?php echo  $this->value[2][1];?> </p>
-						<p class="contentpart"> <?php echo  $this->value[2][2];?> </p>
-					</div>
-					<div class="news">
-						<p class="contentDate"><?php echo  $this->value[3][0];?> </p>
-						<p class="contentTitle"><?php echo  $this->value[3][1];?> </p>
-						<p class="contentpart"> <?php echo  $this->value[3][2];?> </p>
 
+					<?php 
+			$i=0;
+			while($i<=3){
+				if(isset($this->value[$i][0])){
+
+			 ?>
+					<div class="news" >
+						<div class="home-date"><?php echo  $this->value[$i][1];?> </div></br>
+						<div class="home-title"><?php echo  $this->value[$i][2];?> </div>
+						<div class="home-content" > <?php echo  $this->value[$i][3];?> </div>
+						<?php 
+						$cat = $this->value[$i][4];
+
+						 ?>
+
+						<a href="index.php?option=com_<?php echo $cat;?>&view=<?php echo $cat;?>#title<?php echo $this->value[$i][0];?>">More...<?php echo $cat; ?></a>
 					</div>
+			<?php 
+				$i++;
+			}else{
+				break;
+			}
+
+			} ?>
 				</div>
 			</div>
 			

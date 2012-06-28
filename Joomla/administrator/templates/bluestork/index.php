@@ -93,8 +93,8 @@ if ($this->params->get('highContrast')) {
 </style>
 <jdoc:include type="modules" name="title" />
 
-<!-- System Messages -->
-<!-- <jdoc:include type="message" /> -->
+
+<jdoc:include type="message" />
 
 
 <div class="toolbar-box" sytle="float:left;">

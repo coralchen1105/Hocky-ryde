@@ -39,6 +39,9 @@ class PanelViewPanels extends JView
 		$model = new PanelModelPanel();
 
 		$this->result = $model->getAllNews();
+
+		
+		
 		
 
 		// $this->setLayout('default');

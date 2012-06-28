@@ -6,6 +6,7 @@ jimport('joomla.application.component.modellist');
 class PanelModelPanel extends JModelList
 {
 	
+
 	public function getAllNews(){
 		$db = JFactory::getDBO();
 		$sql = "SELECT ID,Date,title,content,catalogues,status 
@@ -77,5 +78,16 @@ class PanelModelPanel extends JModelList
 		$db->setQuery($sql);
 		$db->query();
 
+	}
+
+	public function countRows() {
+		$db = JFactory::getDBO();
+		$sql = "SELECT *
+		 			FROM g7e1f_newshockyclub
+		 			ORDER BY date DESC";
+		$db->setQuery($sql);
+		$db->query();
+		$num_rows = $db->getNumRows();
+		return $num_rows;
 	}
 }

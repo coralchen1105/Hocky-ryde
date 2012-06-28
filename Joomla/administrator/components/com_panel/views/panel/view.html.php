@@ -46,6 +46,8 @@ class PanelViewPanel extends JView
 
 		$this->value = $model->getAllNews();
 
+		$this->num_rows = $model->countRows();
+		
 
 		// var_dump($this->value); exit;
 		parent::display($tpl);

@@ -26,9 +26,9 @@ class MenModelMen extends JModelList
 
 		 $db = JFactory::getDBO();
 
-		 $query = "SELECT date,title,content,catalogues 
+		 $query = "SELECT ID,date,title,content,catalogues 
 		 			FROM #__newshockyclub
-		 			WHERE catalogues = 'mens'
+		 			WHERE catalogues = 'men' AND status = 'publish'
 		 			ORDER BY date DESC";
 
 		 $db->setQuery($query);

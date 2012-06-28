@@ -44,6 +44,74 @@
 						}
 		);
 
+		$("#news").live('click',function(){
+				var a = window.location.hash;
+						if(a) {
+							window.location.hash = "";
+						}
+				$(".newsarea").css("display", "block");
+				$(".contentpart").css("display","none");
+		});
+
+		function initialNewsPage(){	
+				 $(".activetag").attr('class','tab');
+				 $(".tab").next().attr('class','hide');
+				 $(".submenu").removeClass('showsub');
+				 $(".submenu").addClass('hidesub');
+				 $(".content").removeClass('contentShow');
+				 $(".content").addClass('contentHide');
+				 $("#four").children("div").attr('class','activetag');
+				 $("#four").children("img").attr('class','show');
+				 $("#fourcontent").removeClass('contentHide');
+				 $("#fourcontent").addClass('contentShow');
+		}
+
+		$(document).ready(function(){
+   		
+   			var a = window.location.hash;
+
+			if(a){
+
+				var number = a.match(/[0-9]+/);
+				
+				initialNewsPage();
+
+				if(number){
+					var string = number.toString();
+					$(".newsarea").css("display", "none");
+					$("#content"+string).css("display", "block");
+				}else{
+					$(".newsarea").css("display", "block");
+					$(".contentpart").css("display","none");
+				}
+
+			}else{
+
+				$(".newsarea").css("display", "block");
+				$(".contentpart").css("display","none");
+			}
+			
+  		 });	
+
+		function pageReloadWithHash(hash){
+			window.location.hash = hash;
+			window.location.reload(true);
+		}
+
+	
+		$(function(){
+			$('.contentTitle').live('click',function(){
+				pageReloadWithHash($(this).attr('href'));
+				return false;
+			});
+
+		});
+
+		$("#backToPreious").live('click', function(){
+			$(".newsarea").css('display','block');
+			$(".contentpart").css('display','none');
+		});
+
 		</script>
 		
 		<div id="one">
@@ -67,7 +135,7 @@
 		</div>
 
 		<div id="four">
-			<div class="tab">News</div>
+			<div class="tab" id="news">News</div>
 			<img class="hide" src="images/hockyclub/active_tag.png" />
 		</div>
 		
@@ -98,35 +166,43 @@
 		</div>
 
 		<div id="fourcontent" class="content contentHide">
-			<div class="newsarea">
-				<p class="contentDate"><?php echo  $this->value[0][0];?> </p>
-				<p class="contentTitle"><?php echo  $this->value[0][1];?> </p>
-				<p class="contentpart"> <?php echo  $this->value[0][2];?> </p>
+			<div class="tagNav">
+				<span>Master</span>
+				<span>-></span>
+				<span>News</span>
+
 			</div>
 
-			<div class="newsarea">
-				<p class="contentDate"><?php echo  $this->value[1][0];?> </p>
-				<p class="contentTitle"><?php echo  $this->value[1][1];?> </p>
-				<p class="contentpart"> <?php echo  $this->value[1][2];?> </p>
-			</div>
+			<?php 
+			$i=0;
+			while($i<=15){
+				if(isset($this->value[$i][0])){
 
-			<div class="newsarea">
-				<p class="contentDate"><?php echo  $this->value[2][0];?> </p>
-				<p class="contentTitle"><?php echo  $this->value[2][1];?> </p>
-				<p class="contentpart"> <?php echo  $this->value[2][2];?> </p>
-			</div>
+			 ?>
+			
+			 	<div class="newsarea">
 
-			<div class="newsarea">
-				<p class="contentDate"><?php echo  $this->value[3][0];?> </p>
-				<p class="contentTitle"><?php echo  $this->value[3][1];?> </p>
-				<p class="contentpart"> <?php echo  $this->value[3][2];?> </p>
-			</div>
+					<a class="contentTitle" href="#title<?php echo $this->value[$i][0] ?>">
+						<div>
+						<?php echo  $this->value[$i][2];?>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="contentDate"><?php echo  $this->value[$i][1];?> </span>
+						</div>
+					</a>
+					<br />
+				</div>
 
-			<div class="newsarea" style="border:none;">
-				<p class="contentDate"><?php echo  $this->value[4][0];?> </p>
-				<p class="contentTitle"><?php echo  $this->value[4][1];?> </p>
-				<p class="contentpart"> <?php echo  $this->value[4][2];?> </p>
-			</div>
+				<div class="contentpart" id="content<?php echo $this->value[$i][0] ?>">
+						<P><?php echo  $this->value[$i][2];?></P>
+						<p><?php echo $this->value[$i][3];?> </p>
+						<p id="backToPreious">Back to Previous</p>
+				</div>
+			
+			<?php 
+				$i++;
+			}else{
+				break;
+			}
+
+			} ?>
 		</div>
 
 		<div id="fivecontent" class="content"></div>

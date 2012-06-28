@@ -48,18 +48,94 @@
 	<div class="nav">
 		<script type="text/javascript">
 	
-	$(".tab").live('click',function () {
-					$(".activetag").attr('class','tab');
-					$(".submenu").removeClass('showsub');
-					$(".submenu").addClass('hidesub');
-					$(this).attr('class','activetag');
-					$(".show").attr('class','hide');
-					$(this).siblings("img").addClass('show');
-					$(this).siblings("img").removeClass('hide');
-					$(this).siblings("div").addClass('showsub');
-					$(this).siblings("div").removeClass('hidesub');
-					}
-	);
+			$(".tab").live('click',function () {
+								$(".activetag").attr('class','tab');
+								$(".submenu").removeClass('showsub');
+								$(".submenu").addClass('hidesub');
+								$(".content").removeClass('contentShow');
+								$(".content").addClass('contentHide');
+
+								$(this).attr('class','activetag');
+								$(".show").attr('class','hide');
+								$(this).siblings("img").addClass('show');
+								$(this).siblings("img").removeClass('hide');
+								$(this).siblings("div").addClass('showsub');
+								$(this).siblings("div").removeClass('hidesub');
+
+								var id = $(this).parent().attr("id");
+								
+								$("#"+id+"content").removeClass('contentHide');
+								$("#"+id+"content").addClass('contentShow');
+							}
+			);
+
+		$("#news").live('click',function(){
+				var a = window.location.hash;
+						if(a) {
+							window.location.hash = "";
+						}
+				$(".newsarea").css("display", "block");
+				$(".contentpart").css("display","none");
+		});
+
+		function initialNewsPage(){	
+				 $(".activetag").attr('class','tab');
+				 $(".tab").next().attr('class','hide');
+				 $(".submenu").removeClass('showsub');
+				 $(".submenu").addClass('hidesub');
+				 $(".content").removeClass('contentShow');
+				 $(".content").addClass('contentHide');
+				 $("#four").children("div").attr('class','activetag');
+				 $("#four").children("img").attr('class','show');
+				 $("#fourcontent").removeClass('contentHide');
+				 $("#fourcontent").addClass('contentShow');
+		}
+
+		$(document).ready(function(){
+   		
+   			var a = window.location.hash;
+
+			if(a){
+
+				var number = a.match(/[0-9]+/);
+				
+				initialNewsPage();
+
+				if(number){
+					var string = number.toString();
+					$(".newsarea").css("display", "none");
+					$("#content"+string).css("display", "block");
+				}else{
+					$(".newsarea").css("display", "block");
+					$(".contentpart").css("display","none");
+				}
+
+			}else{
+
+				$(".newsarea").css("display", "block");
+				$(".contentpart").css("display","none");
+			}
+			
+  		 });	
+
+		function pageReloadWithHash(hash){
+			window.location.hash = hash;
+			window.location.reload(true);
+		}
+
+	
+		$(function(){
+			$('.contentTitle').live('click',function(){
+				pageReloadWithHash($(this).attr('href'));
+				return false;
+			});
+
+		});
+
+		$("#backToPreious").live('click', function(){
+			$(".newsarea").css('display','block');
+			$(".contentpart").css('display','none');
+		});
 
 		</script>
 		
@@ -84,7 +160,7 @@
 		</div>
 
 		<div id="four">
-			<div class="tab">News</div>
+			<div class="tab" id="news">News</div>
 			<img class="hide" src="images/hockyclub/active_tag.png" />
 		</div>
 		
@@ -101,8 +177,62 @@
 		</div>
 		
 	</div>
-	
-	<div class="rc"></div>
+		
+	<div class="rc">
+
+		<div id="onecontent" class="content contentShow">
+				<p>hello</p>
+		</div>
+		<div id="twocontent" class="content contentHide"></div>
+
+		<div id="threecontent" class="content contentHide">
+		</div>
+		<div id="fourcontent" class="content contentHide">
+			<div class="tagNav">
+				<span>Junior</span>
+				
+				<span>News</span>
+
+			</div>
+
+			<?php 
+			$i=0;
+			while($i<=15){
+				if(isset($this->value[$i][0])){
+
+			 ?>
+			
+			 	<div class="newsarea">
+
+					<a class="contentTitle" href="#title<?php echo $this->value[$i][0] ?>">
+						<div>
+						<?php echo  $this->value[$i][2];?>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="contentDate"><?php echo  $this->value[$i][0];?> </span>
+						</div>
+					</a>
+					<br />
+				</div>
+
+				<div class="contentpart" id="content<?php echo $this->value[$i][0] ?>">
+						<P><?php echo  $this->value[$i][2];?></P>
+						<p><?php echo $this->value[$i][3];?> </p>
+						<p id="backToPreious">Back to Previous</p>
+				</div>
+			
+			<?php 
+				$i++;
+			}else{
+				break;
+			}
+
+			} ?>
+			
+		</div>
+
+		<div id="fivecontent" class="content"></div>
+		<div id="sixcontent" class="content"></div>
+		<div id="sevencontent" class="content"></div>
+
+	</div>
 	
 </div>
 

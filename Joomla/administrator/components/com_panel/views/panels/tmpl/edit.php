@@ -69,15 +69,15 @@ $id2 = $this->getNewsId();
 				
 
 				<select id="category" name="category" class="inputbox required" aria-required="true" required="required" aria-invalid="false" >
-					<option value="mens" <?php if($select == "mens") {
+					<option value="men" <?php if($select == "men") {
 													echo "selected='selected'";}?> >
 					Mens</option>
-					<option value="womens" <?php if($select == "womens") {
+					<option value="women" <?php if($select == "women") {
 													echo "selected='selected'";}?>>
 					Womens</option>
 					<option value="juniors" <?php if($select == "juniors") {
 													echo "selected='selected'";}?>>Juniors</option>
-					<option value="master" <?php if($select == "masters") {
+					<option value="master" <?php if($select == "master") {
 													echo "selected='selected'";}?>>Master</option>
 					
 				</select>

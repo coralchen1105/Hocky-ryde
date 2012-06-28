@@ -9,7 +9,7 @@ jimport('joomla.application.component.modellist');
  * @package		Joomla.Administrator
  * @subpackage	com_content
  */
-class WomenModelWomen extends JModelList
+class JuniorsModelJuniors extends JModelList
 {
 	/**
 	 * Method to build an SQL query to load the list data.
@@ -27,18 +27,17 @@ class WomenModelWomen extends JModelList
 		 $db = JFactory::getDBO();
 
 		 $query = "SELECT ID,date,title,content,catalogues 
-		 			FROM #__newshockyclub
-		 			WHERE catalogues = 'women' AND status = 'publish'
+		 			FROM g7e1f_newshockyclub
+		 			WHERE catalogues = 'juniors' AND status = 'publish'
 		 			ORDER BY date DESC";
 
 		 $db->setQuery($query);
 
 		 $row = $db->loadRowList();
-		//var_dump($row);exit;
+		// var_dump($row);exit;
 		 return  $row;
 		 
 
 		
 	}
 }
-

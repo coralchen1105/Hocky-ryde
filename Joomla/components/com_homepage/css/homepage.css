@@ -141,9 +141,33 @@ background-image: url('components/com_homepage/images/hero_dot.png');
 .news {
 	height:120px;
 	width:650px;
-	border:thin solid black;
+	border-bottom:thin solid black;
 	margin-left:20px;
 	margin-top:10px;
+	font-size:12px;
+	float:left;
+	
+}
+
+.home-content {
+	max-height:44px;
+	overflow:hidden;
+	text-overflow:ellipsis;
+	width:535px;
+	margin-left:100px;
+	float:left;
+}
+.home-date, .home-title {
+	float:left;
+	width:535px;
+	margin-left:100px;
+	margin-top:10px;
+}
+
+.news a {
+	float:right;
+	margin-top:7px;
+	margin-right:15px;
 }
 
 .sponsors  {

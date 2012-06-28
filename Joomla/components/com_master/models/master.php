@@ -26,9 +26,9 @@ class MasterModelMaster extends JModelList
 
 		 $db = JFactory::getDBO();
 
-		 $query = "SELECT date,title,content,catalogues 
-		 			FROM #__newshockyclub
-		 			WHERE catalogues = 'masters'
+		 $query = "SELECT ID,date,title,content,catalogues 
+		 			FROM g7e1f_newshockyclub
+		 			WHERE catalogues = 'master' AND status = 'publish'
 		 			ORDER BY date DESC";
 
 		 $db->setQuery($query);
