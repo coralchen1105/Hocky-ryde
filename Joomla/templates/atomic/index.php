@@ -31,13 +31,13 @@ defined('_JEXEC') or die;?>
             
             <div id="wrapper" >
                 <div id="heading">
-                    <span><img src="templates/atomic/images/logo.png"/></span>
+                    <span><img src="templates/atomic/images/logo2.png"/></span>
                     <div class="topright">
                         <div style="font-size:20px; margin-bottom: 5px; ">Find Us:</div>
-                        <img src="templates/atomic/images/fb.gif" />
-                        <img src="templates/atomic/images/tw.gif" />
-                        <img src="templates/atomic/images/yt.gif" />
-                        <a href="http://hockey.dev/index.php?option=com_join&view=join"><div style="margin-top: 7px;background:#ffb400; height:29px;width:100px;border-radius:5px; color:black; text-align:center;text-weight:bold;font-size:18px; padding-top:5px;">Join Us
+                        <img src="templates/atomic/images/fb1.gif" />
+                        <img src="templates/atomic/images/tw1.gif" />
+                        <img src="templates/atomic/images/yt1.gif" />
+                        <a href="http://hockey.dev/index.php?option=com_join&view=join"><div style="margin-top: 5px;background:#ffb400; height:25px;width:90px;border-radius:5px; color:black; text-align:center;text-weight:bold;font-size:17px; padding-top:5px;">Join Us
                         </div></a>
                     </div>
                 </div>
@@ -53,7 +53,7 @@ defined('_JEXEC') or die;?>
 				
                     <a href="index.php?option=com_homepage&view=homepage"><span class="<?php if($_REQUEST['option'] == 'com_homepage') echo "activemenu"; ?>">Home</span></a>
                     <a href="index.php?option=com_club&view=club"><span class="<?php if($_REQUEST['option'] == 'com_club') echo "activemenu"; ?>">Club History</span></a>
-                    <a href="http://hockey.dev/index.php?option=com_men&view=men"><span class="<?php if($_REQUEST['option'] == 'com_men') echo "activemenu"; ?>">Mens</span></a>
+                    <a href="index.php?option=com_men&view=men"><span class="<?php if($_REQUEST['option'] == 'com_men') echo "activemenu"; ?>">Mens</span></a>
                     <a href="index.php?option=com_women&view=women"><span class="<?php if($_REQUEST['option'] == 'com_women') echo "activemenu"; ?>">Womens</span></a>
                     <a href="index.php?option=com_juniors&view=juniors"><span class="<?php if($_REQUEST['option'] == 'com_juniors') echo "activemenu"; ?>">Juniors</span></a>
                     <a href="index.php?option=com_master&view=master"><span class="<?php if($_REQUEST['option'] == 'com_master') echo "activemenu"; ?>">Masters</span></a>

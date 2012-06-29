@@ -12,7 +12,7 @@
 	margin-bottom:20px;
 	border:thin solid grey;
 	border-radius:5px;
-	margin-top:10px;
+	/*margin-top:10px;*/
 	box-shadow:0px 2px 4px 0px #979797;
 }
 
@@ -144,9 +144,11 @@ margin-top: 10px;
 				
 		</div>
 
-		<div id="fivecontent" class="content"></div>
-		<div id="sixcontent" class="content"></div>
-		<div id="sevencontent" class="content"></div>
+		<div id="fivecontent" class="content contentHide">
+			<?php require_once('gallery.php'); ?>
+		</div>
+		<div id="sixcontent" class="content contentHide"></div>
+		<div id="sevencontent" class="content contentHide"></div>
 
 
 	</div>

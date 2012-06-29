@@ -12,7 +12,7 @@
 
 <div id="hero">
 	<div class="heroimage">
-		<img src="components/com_men/images/subpage_banner.jpg" />
+		<img src="components/com_men/images/subpage_banner1.jpg" />
 	</div>
 </div>
 
@@ -60,6 +60,7 @@
 						if(a) {
 							window.location.hash = "";
 						}
+				window.scrollTo(0,500);
 				$(".newsarea").css("display", "block");
 				$(".contentpart").css("display","none");
 		});

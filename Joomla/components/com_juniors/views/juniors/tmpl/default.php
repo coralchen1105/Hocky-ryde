@@ -11,7 +11,7 @@
 	margin-bottom:20px;
 	border:thin solid grey;
 	border-radius:5px;
-	margin-top:10px;
+	/*margin-top:10px;*/
 	box-shadow:0px 2px 4px 0px #979797;
 }
 
@@ -34,7 +34,7 @@
 
 <div id="hero">
 	<div class="heroimage">
-		<img src="components/com_juniors/images/subpage_banner.jpg" />
+		<img src="components/com_juniors/images/subpage_banner1.jpg" />
 	</div>
 </div>
 
@@ -74,6 +74,7 @@
 						if(a) {
 							window.location.hash = "";
 						}
+				window.scrollTo(0,500);
 				$(".newsarea").css("display", "block");
 				$(".contentpart").css("display","none");
 		});

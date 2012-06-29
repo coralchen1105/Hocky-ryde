@@ -25,7 +25,7 @@ body {
 }
 
 #heading {
-    height:126px;
+    height:115px;
     margin-top: 10px;
     
 }
@@ -46,8 +46,8 @@ color:white;
 
 
 #navigation {
-    height: 45px;
-    background: url('../images/nav_bg.png') repeat-x top;
+    height: 40px;
+    background: url('../images/nav_bg1.png') repeat-x top;
     border-radius: 8px;
 /*    box-shadow: 0px 2px 1px gray;*/
     
@@ -72,7 +72,7 @@ color:#525252;
 }
 
 #navigation span {
-    padding: 3px 43px;
+    padding: 1px 43px;
     margin-top: 10px;
     float: left;
   /*  font-weight:bold;*/

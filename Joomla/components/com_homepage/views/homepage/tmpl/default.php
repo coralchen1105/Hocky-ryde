@@ -158,25 +158,25 @@ background:url('components/com_homepage/images/hero_info.png') top no-repeat;
 				 <div id="mens" style=" float:left; display:block;">   
 					<h1>Mens Club</h1>
 					<p>Training on the turf starts on the 15th of February for 4th-10th grade and 16th February for 1st-3rd grade. The club is putting a lot of effort into ensuring that players get maximum value out of training this season so we would encourage everyone who wants to play senior hockey at Ryde in 2012...</p>
-					<p style=" margin-left:19px; font-size:19px; color:#ffb400;">Read More <img src="components/com_homepage/images/read_more.png" style="margin-right:152px; float:right;"/></p> 
+					<p href="index.php?option=com_men&view=men" style=" margin-left:19px; font-size:19px; color:#ffb400;">Read More <a href="index.php?option=com_men&view=men"><img href="index.php?option=com_men&view=men" src="components/com_homepage/images/read_more.png" style="margin-right:152px; float:right;"/></a></p> 
 				</div>
 		
 				<div id="womens" style="float:left; display:none;">   
 					<h1>Womens Club</h1>
 					<p>Training on the turf starts on the 15th of February for 4th-10th grade and 16th February for 1st-3rd grade. The club is putting a lot of effort into ensuring that players get maximum value out of training this season so we would encourage everyone who wants to play senior hockey at Ryde in 2012...</p>
-					<p style=" margin-left:19px; font-size:19px; color:#ffb400;">Read More <img src="components/com_homepage/images/read_more.png" style="margin-right:152px; float:right;"/></p> 
+					<p style=" margin-left:19px; font-size:19px; color:#ffb400;">Read More <a href="index.php?option=com_women&view=women"><img src="components/com_homepage/images/read_more.png" style="margin-right:152px; float:right;"/></a></p> 
 				</div>
 		
 				<div id="juniors" style="float:left; display:none;">   
 					<h1>Juniors Club</h1>
 					<p>Training on the turf starts on the 15th of February for 4th-10th grade and 16th February for 1st-3rd grade. The club is putting a lot of effort into ensuring that players get maximum value out of training this season so we would encourage everyone who wants to play senior hockey at Ryde in 2012...</p>
-					<p style=" margin-left:19px; font-size:19px; color:#ffb400;">Read More <img src="components/com_homepage/images/read_more.png" style="margin-right:152px; float:right;"/></p> 
+					<p style=" margin-left:19px; font-size:19px; color:#ffb400;">Read More <a href="index.php?option=com_juniors&view=juniors"><img src="components/com_homepage/images/read_more.png" style="margin-right:152px; float:right;"/></a></p> 
 				</div>
 		
 				<div id="master" style="float:left; display:none;">   
 					<h1>Master Club</h1>
 					<p>Training on the turf starts on the 15th of February for 4th-10th grade and 16th February for 1st-3rd grade. The club is putting a lot of effort into ensuring that players get maximum value out of training this season so we would encourage everyone who wants to play senior hockey at Ryde in 2012...</p>
-					<p style=" margin-left:19px; font-size:19px; color:#ffb400;">Read More <img src="components/com_homepage/images/read_more.png" style="margin-right:152px; float:right;"/></p> 
+					<p style=" margin-left:19px; font-size:19px; color:#ffb400;">Read More <a href="index.php?option=com_master&view=master"><img src="components/com_homepage/images/read_more.png" style="margin-right:152px; float:right;"/></a></p> 
 				</div>
 </div>					
           
